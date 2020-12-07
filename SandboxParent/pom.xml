@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.weaver.aws.sandbox</groupId>
+  <artifactId>SandboxParent</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+     <properties>
+  		<AWS.sdk.version>2.15.35</AWS.sdk.version>
+    </properties>
+  
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>software.amazon.awssdk</groupId>
+				<artifactId>bom</artifactId>
+				<version>${AWS.sdk.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>     	
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId><configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+
+	<modules>
+		<module>SandboxSecrets</module>
+		<module>SandboxEC2</module>
+		<module>SandboxTester</module>
+	</modules>
+</project>
