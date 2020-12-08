@@ -15,7 +15,7 @@ import software.amazon.awssdk.services.secretsmanager.model.SecretsManagerExcept
 public class SecretManager {
 	
 	private final SecretsManagerClient secretsClient;
-	private final Logger logger = LoggerFactory.getLogger(SecretManager.class);
+	private static final Logger logger = LoggerFactory.getLogger(SecretManager.class);
 	 
     public SecretManager() {
 		super();

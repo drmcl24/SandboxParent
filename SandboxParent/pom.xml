@@ -38,5 +38,6 @@
 		<module>SandboxSecrets</module>
 		<module>SandboxEC2</module>
 		<module>SandboxTester</module>
+		<module>SandboxRDS</module>
 	</modules>
 </project>
